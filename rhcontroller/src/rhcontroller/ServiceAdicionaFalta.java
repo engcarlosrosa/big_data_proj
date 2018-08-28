@@ -37,7 +37,7 @@ public class ServiceAdicionaFalta extends HttpServlet {
 		Faltas falta = new Faltas();
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
 		falta.setId_funcionario(request.getParameter("id_funcionario"));
-		falta.setId_falta(request.getParameter("id_falta"));
+		//falta.setId_falta(request.getParameter("id_falta"));
 		String dia = request.getParameter("dia");
 		Date data;
 		try{

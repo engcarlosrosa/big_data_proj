@@ -19,8 +19,8 @@ import com.google.gson.Gson;
 /**
  * Servlet implementation class RecebeJsonPagamentos
  */
-@WebServlet("/RecebeJsonBeneficio")
-public class RecebeJsonBeneficio extends HttpServlet {
+@WebServlet("/RecebeJsonBeneficios")
+public class RecebeJsonBeneficios extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -40,7 +40,7 @@ public class RecebeJsonBeneficio extends HttpServlet {
 			
 			
 			String json = new Gson().toJson(pagamentos);
-			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonPagamentos.java:");
+			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonBeneficios.java:");
 			System.out.println(json);
 		} catch (org.json.simple.parser.ParseException e1){
 			e1.printStackTrace();

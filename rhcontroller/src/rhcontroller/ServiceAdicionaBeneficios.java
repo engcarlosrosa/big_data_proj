@@ -26,8 +26,8 @@ import org.apache.http.message.BasicNameValuePair;
 import com.google.gson.Gson;
 
 
-@WebServlet("/ServiceAdicionaBeneficio")
-public class ServiceAdicionaBeneficio extends HttpServlet {
+@WebServlet("/ServiceAdicionaBeneficios")
+public class ServiceAdicionaBeneficios extends HttpServlet {
 	protected void service(HttpServletRequest request,
 							HttpServletResponse response)
 	throws IOException, ServletException {
@@ -42,12 +42,12 @@ public class ServiceAdicionaBeneficio extends HttpServlet {
 		
 		
 		String json = new Gson().toJson(pagamentos);
-		System.out.println("Estamos em rhcontroller/ServiceAdicionaBeneficio.java");
+		System.out.println("Estamos em rhcontroller/ServiceAdicionaBeneficios.java");
 		System.out.println(json);
 		
 		//POST
 		HttpClient client = HttpClients.createDefault();
-		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonBeneficio";
+		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonBeneficios";
 		HttpPost request1 = new HttpPost(url);
 		List<NameValuePair>  urlParameters = new ArrayList<NameValuePair>();
  		urlParameters.add(new BasicNameValuePair("json",json));

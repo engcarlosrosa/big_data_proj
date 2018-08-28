@@ -1,5 +1,2 @@
 INDEX VERSION 1.129+C:\Users\user\Documents\GitHub\big_data_proj\.metadata\.plugins\org.eclipse.jdt.core
-291155698.index
-2729295.index
-2790302833.index
 3084041629.index

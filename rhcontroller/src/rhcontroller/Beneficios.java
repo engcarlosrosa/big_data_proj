@@ -1,6 +1,6 @@
 package rhcontroller;
 
-public class Faltas {
+public class Beneficios {
 	
 	private Integer id_funcionario;
 	private Integer id_beneficio;

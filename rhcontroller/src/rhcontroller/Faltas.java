@@ -38,7 +38,7 @@ public class Faltas {
 	public Integer getAbono() {
 		return abono;
 	}
-	public void setTipo(Integer abono) {
+	public void setAbono(Integer abono) {
 		this.abono = abono;
 	}
 	

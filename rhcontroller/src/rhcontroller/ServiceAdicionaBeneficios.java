@@ -34,7 +34,7 @@ public class ServiceAdicionaBeneficio extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		DadosPessoais beneficio = new DadosPessoais();
+		Beneficios beneficio = new Beneficios();
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
 		beneficio.setId_funcionario(request.getParameter("id_funcionario"));
 		beneficio.setId_beneficio(request.getParameter("id_beneficio"));

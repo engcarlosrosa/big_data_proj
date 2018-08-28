@@ -26,46 +26,56 @@ import org.apache.http.message.BasicNameValuePair;
 import com.google.gson.Gson;
 
 
-@WebServlet("/ServiceAdicionaPagamentos")
-public class ServiceAdicionaPagamentos extends HttpServlet {
+@WebServlet("/ServiceAdicionaFalta")
+public class ServiceAdicionaFalta extends HttpServlet {
 	protected void service(HttpServletRequest request,
 							HttpServletResponse response)
 	throws IOException, ServletException {
 		
 		PrintWriter out = response.getWriter();
 		
-		Pagamentos pagamentos = new Pagamentos();
+		Faltas falta = new Faltas();
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
-		pagamentos.setId_funcionario(request.getParameter("id_funcionario"));
-		pagamentos.setId_pagamentos(request.getParameter("id_pagamento"));
-		pagamentos.setMes(request.getParameter("mes"));
-		pagamentos.setAno(request.getParameter("ano"));
-		pagamentos.setTipo(request.getParameter("tipo"));
+		falta.setId_funcionario(request.getParameter("id_funcionario"));
+		falta.setId_falta(request.getParameter("id_falta"));
+		String dia = request.getParameter("dia");
+		Date data;
+		try{
+			data = new SimpleDateFormat("yyyy-MM-dd").parse(nascimento);
+			Calendar dia = Calendar.getInstance();
+			dia.setTime(data);
+			falta.setDia(dia);			
+		} catch (java.text.ParseException e){
+			e.printStackTrace();
+		}
+		falta.setAbono(request.getParameter("abono"));
+		falta.setMotivo(request.getParameter("motivo"));
+	
 		
 		
-		String json = new Gson().toJson(pagamentos);
-		System.out.println("Estamos em rhcontroller/ServiceAdicionaPagamentos.java");
+		String json = new Gson().toJson(dadosPessoais);
+		System.out.println("Estamos em rhcontroller/ServiceAdicionaDadosPessoais.java");
 		System.out.println(json);
 		
 		//POST
 		HttpClient client = HttpClients.createDefault();
-		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonPagamentos";
+		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonDadosPessoais";
 		HttpPost request1 = new HttpPost(url);
 		List<NameValuePair>  urlParameters = new ArrayList<NameValuePair>();
  		urlParameters.add(new BasicNameValuePair("json",json));
  		request1.setEntity(new UrlEncodedFormEntity(urlParameters));
  		HttpResponse resp = client.execute(request1);
  		
- 		// ***out.println("<html>");
- 		// out.println("<body>");
- 		// out.println(pagamentos.getNome() + " adicionado com sucesso.");
- 		// out.println("Voltar para o ");
- 		// out.println("<a href=\"menu.html\">Menu Principal</a>");
- 		// out.println(" ou ");
- 		// out.println("<a href=\"cria_dados_pessoais.html\"> Adicionar novo funcionário.</a>");
- 		// out.println("</a>");
- 		// out.println("</body>");
- 		// out.println("</html>");
+ 		out.println("<html>");
+ 		out.println("<body>");
+ 		out.println(dadosPessoais.getNome() + " adicionado com sucesso.");
+ 		out.println("Voltar para o ");
+ 		out.println("<a href=\"menu.html\">Menu Principal</a>");
+ 		out.println(" ou ");
+ 		out.println("<a href=\"cria_dados_pessoais.html\"> Adicionar novo funcionário.</a>");
+ 		out.println("</a>");
+ 		out.println("</body>");
+ 		out.println("</html>");
 		
 	}
 

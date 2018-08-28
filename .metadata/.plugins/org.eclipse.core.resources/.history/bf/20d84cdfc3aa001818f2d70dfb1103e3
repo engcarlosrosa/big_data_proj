@@ -1,0 +1,23 @@
+package rhcontroller;
+
+import java.util.Calendar;
+
+public class dados_pessoais {
+	private Integer id_funcionario;
+	private String nome;
+	private Calendar nascimento;
+	private String rg;
+	private String orgao;
+	private String cpf;
+	private String nacionalidade;
+	private String endereco;
+	private String contato;
+	private String nome_pai;
+	private String nome_mae;
+	private String dados_bancarios;
+	
+	
+	
+	
+
+}

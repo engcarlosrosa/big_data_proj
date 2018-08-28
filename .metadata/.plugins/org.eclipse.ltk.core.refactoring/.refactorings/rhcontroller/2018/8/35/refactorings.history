@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;rhcontroller.dados_pessoais&apos; to &apos;DadosPessoais&apos;&#x0D;&#x0A;- Original project: &apos;rhcontroller&apos;&#x0D;&#x0A;- Original element: &apos;rhcontroller.dados_pessoais&apos;&#x0D;&#x0A;- Renamed element: &apos;rhcontroller.DadosPessoais&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;dados_pessoais&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;rhcontroller{dados_pessoais.java[dados_pessoais" matchStrategy="1" name="DadosPessoais" qualified="false" references="true" similarDeclarations="false" stamp="1535462453147" textual="false" version="1.0"/>
+</session>

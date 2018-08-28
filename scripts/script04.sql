@@ -1,0 +1,19 @@
+USE RHCONTROLLER;
+
+INSERT INTO DADOS_PESSOAIS VALUES( 
+		1, 'Antonio Sigrist', '1996-03-18', 500000000, 'IIRGD', 
+        '44388445843', 'Brasileiro', 'Rua Quatá 300', 
+        '11-99700-0000', 'Pai', 'Mae', 
+        'Itau, Ag:4000-0, C/C:5000-0, Antonio Sigrist');
+
+INSERT INTO PAGAMENTOS VALUES(
+		1, 1, 10000.57, '2018-08-03', 'Bonus');
+
+INSERT INTO FALTAS VALUES(
+		1, 1, '2018-08-01', 'Check-up no Einstein', 1);
+
+INSERT INTO BENEFICIOS VALUES(
+		1, 'Vale-Refeição');
+
+INSERT INTO FUNCIONARIOS_BENEFICIOS_REL VALUES(
+		1, 1, 1000.00);

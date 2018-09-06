@@ -221,3 +221,24 @@
 2018-08-28 12:51:20,818 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\main\resources
 2018-08-28 12:51:20,826 [Worker-104] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-08-28 12:51:20,842 [Worker-104] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\test\resources
+2018-08-28 12:53:52,763 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@3c0c26a3{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2018-08-28 12:53:52,796 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@2edb55d0{/help,null,UNAVAILABLE}
+2018-09-05 11:30:27,990 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @73479ms
+2018-09-05 11:30:28,470 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-09-05 11:30:28,582 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@5a320c8f{/help,null,AVAILABLE}
+2018-09-05 11:30:28,621 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@4e7dfed6{HTTP/1.1,[http/1.1]}{127.0.0.1:56659}
+2018-09-05 11:30:28,621 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @74122ms
+2018-09-05 11:30:30,047 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:30,104 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\main\resources
+2018-09-05 11:30:30,108 [Worker-11] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:30,155 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\test\resources
+2018-09-05 11:30:35,918 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:35,959 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\main\resources
+2018-09-05 11:30:35,961 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:36,068 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\test\resources
+2018-09-05 11:30:37,325 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:37,352 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\main\resources
+2018-09-05 11:30:37,354 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-05 11:30:37,384 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\test\resources
+2018-09-05 11:46:07,226 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@4e7dfed6{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2018-09-05 11:46:07,268 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@5a320c8f{/help,null,UNAVAILABLE}

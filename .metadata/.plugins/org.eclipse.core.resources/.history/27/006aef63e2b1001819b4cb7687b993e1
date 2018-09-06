@@ -1,0 +1,13 @@
+package rhcontroller;
+
+import java.util.Calendar;
+
+public class Faltas {
+	
+	private String id_falta;
+	private String id_funcionario;
+	private Calendar dia;
+	private String motivo;
+	private String abono;
+
+}

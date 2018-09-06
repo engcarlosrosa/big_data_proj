@@ -33,10 +33,10 @@ public class RecebeJsonFaltas extends HttpServlet {
 		try{
 			jsonObject = (JSONObject) parser.parse(request.getParameter("json"));
 			//dadosPessoais.setId_funcionario(Integer.valueOf(jsonObject.get("id_funcionario").toString()));
-			falta.setId_funcionario((Integer) jsonObject.get("id_funcionario"));
-			falta.setId_falta((Integer) jsonObject.get("id_falta"));
+			falta.setId_funcionario((String) jsonObject.get("id_funcionario"));
+			falta.setId_falta((String) jsonObject.get("id_falta"));
 
-			JSONObject object = (JSONObject) jsonObject.get("nascimento");
+			JSONObject object = (JSONObject) jsonObject.get("dia");
 
 	        int year = Integer.valueOf(object.get("year").toString());
 	        int month = Integer.valueOf(object.get("month").toString());
@@ -50,10 +50,10 @@ public class RecebeJsonFaltas extends HttpServlet {
 
 
 			falta.setMotivo((String) jsonObject.get("motivo"));
-			falta.setAbono((Integer) jsonObject.get("abono"));
+			falta.setAbono((String) jsonObject.get("abono"));
 			
 			
-			String json = new Gson().toJson(dadosPessoais);
+			String json = new Gson().toJson(falta);
 			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonDadosPessoais.java:");
 			System.out.println(json);
 		} catch (org.json.simple.parser.ParseException e1){

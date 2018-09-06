@@ -1,38 +1,37 @@
-package rhcontroller;
-
+package business_server_rhcontroller;
 //import java.util.Calendar;
 
 public class Pagamentos {
 	
-	private Integer id_pagamentos;
-	private Integer id_funcionario;
-	private Integer mes;
-	private Integer ano;
+	private String id_pagamentos;
+	private String id_funcionario;
+	private String mes;
+	private String ano;
 	private String tipo;
 	
 	
-	public Integer getId_funcionario() {
-		return id_funcionario;
-	}
-	public void setId_funcionario(Integer id_funcionario) {
-		this.id_funcionario = id_funcionario;
-	}
-	public Integer getId_pagamentos() {
+	public String getId_pagamentos() {
 		return id_pagamentos;
 	}
-	public void setId_pagamentos(Integer id_pagamentos) {
+	public void setId_pagamentos(String id_pagamentos) {
 		this.id_pagamentos = id_pagamentos;
 	}
-	public Integer getMes() {
+	public String getId_funcionario() {
+		return id_funcionario;
+	}
+	public void setId_funcionario(String id_funcionario) {
+		this.id_funcionario = id_funcionario;
+	}
+	public String getMes() {
 		return mes;
 	}
-	public void setMes(Integer mes) {
-		this.nascimento = nascimento;
+	public void setMes(String mes) {
+		this.mes = mes;
 	}
-	public Integer getAno() {
+	public String getAno() {
 		return ano;
 	}
-	public void setAno(Integer ano) {
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
 	public String getTipo() {
@@ -41,6 +40,8 @@ public class Pagamentos {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	
 	
 	
 }

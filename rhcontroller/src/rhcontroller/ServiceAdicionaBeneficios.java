@@ -36,12 +36,12 @@ public class ServiceAdicionaBeneficios extends HttpServlet {
 		
 		Beneficios beneficio = new Beneficios();
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
-		beneficio.setId_funcionario(request.getParameter("id_funcionario"));
-		beneficio.setId_beneficio(request.getParameter("id_beneficio"));
-		beneficio.setValor(request.getParameter("valor"));
+		beneficio.setId_funcionario((String) request.getParameter("id_funcionario"));
+		beneficio.setId_beneficio((String) request.getParameter("id_beneficio"));
+		beneficio.setValor((String) request.getParameter("valor"));
 		
 		
-		String json = new Gson().toJson(pagamentos);
+		String json = new Gson().toJson(beneficio);
 		System.out.println("Estamos em rhcontroller/ServiceAdicionaBeneficios.java");
 		System.out.println(json);
 		

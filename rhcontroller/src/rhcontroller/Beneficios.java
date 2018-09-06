@@ -2,30 +2,27 @@ package rhcontroller;
 
 public class Beneficios {
 	
-	private Integer id_funcionario;
-	private Integer id_beneficio;
-	private float valor;
-	
-	
-	public Integer getId_funcionario() {
+	private String id_funcionario;
+	private String id_beneficio;
+	private String valor;
+	public String getId_funcionario() {
 		return id_funcionario;
 	}
-	public void setId_funcionario(Integer id_funcionario) {
+	public void setId_funcionario(String id_funcionario) {
 		this.id_funcionario = id_funcionario;
 	}
-	public Integer getId_beneficio() {
+	public String getId_beneficio() {
 		return id_beneficio;
 	}
-	public void setId_beneficio(Integer id_beneficio) {
+	public void setId_beneficio(String id_beneficio) {
 		this.id_beneficio = id_beneficio;
 	}
-	public float getValor() {
+	public String getValor() {
 		return valor;
 	}
-	public void setValor(float valor) {
+	public void setValor(String valor) {
 		this.valor = valor;
 	}
 	
-	
-	
+		
 }

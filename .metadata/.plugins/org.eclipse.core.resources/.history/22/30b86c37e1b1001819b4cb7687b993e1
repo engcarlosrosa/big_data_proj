@@ -1,0 +1,14 @@
+package business_server_rhcontroller;
+//import java.util.Calendar;
+
+public class Pagamentos {
+	
+	private String id_pagamentos;
+	private String id_funcionario;
+	private String mes;
+	private String ano;
+	private String tipo;
+	
+	
+	
+}

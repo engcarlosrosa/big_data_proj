@@ -36,30 +36,30 @@ public class ServiceAdicionaFalta extends HttpServlet {
 		
 		Faltas falta = new Faltas();
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
-		falta.setId_funcionario(request.getParameter("id_funcionario"));
+		falta.setId_funcionario((String) request.getParameter("id_funcionario"));
 		//falta.setId_falta(request.getParameter("id_falta"));
 		String dia = request.getParameter("dia");
 		Date data;
 		try{
-			data = new SimpleDateFormat("yyyy-MM-dd").parse(nascimento);
-			Calendar dia = Calendar.getInstance();
-			dia.setTime(data);
-			falta.setDia(dia);			
+			data = new SimpleDateFormat("yyyy-MM-dd").parse(dia);
+			Calendar dia1 = Calendar.getInstance();
+			dia1.setTime(data);
+			falta.setDia(dia1);			
 		} catch (java.text.ParseException e){
 			e.printStackTrace();
 		}
-		falta.setAbono(request.getParameter("abono"));
-		falta.setMotivo(request.getParameter("motivo"));
+		falta.setAbono((String) request.getParameter("abono"));
+		falta.setMotivo((String) request.getParameter("motivo"));
 	
 		
 		
-		String json = new Gson().toJson(dadosPessoais);
+		String json = new Gson().toJson(falta);
 		System.out.println("Estamos em rhcontroller/ServiceAdicionaDadosPessoais.java");
 		System.out.println(json);
 		
 		//POST
 		HttpClient client = HttpClients.createDefault();
-		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonDadosPessoais";
+		String url = "http://localhost:8080/business_server_rhcontroller/RecebeJsonFaltas";
 		HttpPost request1 = new HttpPost(url);
 		List<NameValuePair>  urlParameters = new ArrayList<NameValuePair>();
  		urlParameters.add(new BasicNameValuePair("json",json));
@@ -68,7 +68,7 @@ public class ServiceAdicionaFalta extends HttpServlet {
  		
  		out.println("<html>");
  		out.println("<body>");
- 		out.println(dadosPessoais.getNome() + " adicionado com sucesso.");
+ 		out.println(falta.getId_falta() + " adicionado com sucesso.");
  		out.println("Voltar para o ");
  		out.println("<a href=\"menu.html\">Menu Principal</a>");
  		out.println(" ou ");

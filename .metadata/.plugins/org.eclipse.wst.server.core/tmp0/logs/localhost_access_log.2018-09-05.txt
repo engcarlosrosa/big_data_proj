@@ -1,0 +1,9 @@
+127.0.0.1 - - [05/Sep/2018:11:30:56 -0300] "GET / HTTP/1.1" 404 1000
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:31:36 -0300] "GET /rhcontroller/cria_dados_pessoais.html HTTP/1.1" 200 1517
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:31:36 -0300] "GET /favicon.ico HTTP/1.1" 404 1022
+127.0.0.1 - - [05/Sep/2018:11:34:18 -0300] "POST /business_server_rhcontroller/RecebeJsonDadosPessoais HTTP/1.1" 200 -
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:34:18 -0300] "POST /rhcontroller/ServiceAdicionaDadosPessoais HTTP/1.1" 200 224
+127.0.0.1 - - [05/Sep/2018:11:39:51 -0300] "POST /business_server_rhcontroller/RecebeJsonDadosPessoais HTTP/1.1" 500 1457
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:39:51 -0300] "POST /rhcontroller/ServiceAdicionaDadosPessoais HTTP/1.1" 200 224
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:40:05 -0300] "GET /rhcontroller/ServiceListaFuncionarios HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [05/Sep/2018:11:40:11 -0300] "GET /rhcontroller/ServiceListaFuncionarios HTTP/1.1" 404 1074

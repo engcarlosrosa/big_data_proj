@@ -512,3 +512,18 @@
 2018-09-06 11:53:17,895 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\test\resources
 2018-09-06 11:53:34,484 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@7d80811c{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
 2018-09-06 11:53:34,551 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3164c54f{/help,null,UNAVAILABLE}
+2018-09-12 11:27:45,279 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @58247ms
+2018-09-12 11:27:45,668 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2018-09-12 11:27:45,772 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@446925e1{/help,null,AVAILABLE}
+2018-09-12 11:27:45,814 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@61691b3b{HTTP/1.1,[http/1.1]}{127.0.0.1:51066}
+2018-09-12 11:27:45,815 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @58790ms
+2018-09-12 11:27:46,937 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-12 11:27:46,966 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\main\resources
+2018-09-12 11:27:46,970 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-12 11:27:47,002 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\business_server_rhcontroller\src\test\resources
+2018-09-12 11:27:53,612 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-12 11:27:53,658 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\main\resources
+2018-09-12 11:27:53,660 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-09-12 11:27:53,707 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\user\Documents\GitHub\big_data_proj\rhcontroller\src\test\resources
+2018-09-12 11:37:16,263 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@61691b3b{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2018-09-12 11:37:16,313 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@446925e1{/help,null,UNAVAILABLE}

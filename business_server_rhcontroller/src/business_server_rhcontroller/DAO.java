@@ -115,6 +115,7 @@ public class DAO {
 			while(rs.next()){
 
 				DadosPessoais usuario = new DadosPessoais();
+				
 				usuario.setNome(rs.getString("nome"));
 				usuario.setNascimento(rs.getString("nascimento"));
 				usuario.setRg(rs.getString("rg"));

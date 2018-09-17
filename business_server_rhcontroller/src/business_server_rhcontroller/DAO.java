@@ -102,6 +102,44 @@ public class DAO {
 		}
 	}
 
+	public List<DadosPessoais> getListaUsuarios(){
+
+		List<DadosPessoais> usuarios = new ArrayList<DadosPessoais>();
+		
+		PreparedStatement stmt;
+
+		try {
+			stmt = connection.prepareStatement("SELECT * FROM dados_pessoais");
+			ResultSet rs = stmt.executeQuery();
+			
+			while(rs.next()){
+
+				DadosPessoais usuario = new DadosPessoais();
+				usuario.setNome(rs.getString("nome"));
+				usuario.setNascimento(rs.getString("nascimento"));
+				usuario.setRg(rs.getString("rg"));
+				usuario.setOrgao(rs.getString("orgao"));
+				usuario.setCpf(rs.getString("cpf"));
+				usuario.setNacionalidade(rs.getString("nascionalidade"));
+				usuario.setEndereco(rs.getString("endereco"));
+				usuario.setContato(rs.getString("contato"));
+				usuario.getNome_pai(rs.getString("nome_pai"));
+				usuario.getNome_mae(rs.getString("nome_mae"));
+				usuario.getDados_bancarios(rs.getString("dados_bancarios"));
+				usuarios.add(usuario);
+			}
+
+			rs.close();
+			stmt.close();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return usuarios;		
+	}
+	
+
 	public void removeColaborador(String id){
 		PreparedStatement stmt;
 		try {

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Lista de Funcionários</title>
+</head>
+<body>
+<ul>
+  <li><a href="menu.html">Menu Principal</a></li>
+  <li><a href="cria_dados_pessoais.html">Cria Dados Pessoais</a></li>
+  <li><a href="ServiceListaFuncionarios">Lista Funcionarios</a></li>
+  <li><a href="cria_pagamentos.html">Cria Pagamento</a></li>
+  <li><a href="ServiceListaPagamentos">Lista Pagamentos</a></li>
+  <li><a href="cria_beneficios.html">Cria Benefício</a></li>
+  <li><a href="ServiceListaBeneficios">Lista Beneficios</a></li>
+  <li><a href="cria_faltas.html">Cria Falta</a></li>
+  <li><a href="ServiceListaFaltas">Lista Faltas</a></li>
+</ul>
+<form name="myForm" id="myForm" action="ServiceListaContasUsuario" method="post">
+ 	Usuario Id:<input name="usuario_id" type="text" id="id">
+ 	<br>
+    <input type="submit" value="Listar">
+</form>
+<script type="text/javascript">
+var hashParams = window.location.hash.substr(1).split('&'); // substr(1) to remove the `#`
+for(var i = 0; i < hashParams.length; i++){
+    var p = hashParams[i].split('=');
+    document.getElementById(p[0]).value = decodeURIComponent(p[1]);;
+}
+document.getElementById('myForm').submit();
+</script>
+</body>
+</html>

@@ -26,6 +26,7 @@ public class RecebeJsonDadosPessoais extends HttpServlet {
 		
 		
 		request.getParameter("json");
+		DAO dao = new DAO();
 		DadosPessoais dadosPessoais = new DadosPessoais();
 		JSONObject jsonObject;
 		JSONParser parser = new JSONParser();
@@ -56,6 +57,7 @@ public class RecebeJsonDadosPessoais extends HttpServlet {
 			String json = new Gson().toJson(dadosPessoais);
 			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonDadosPessoais.java:");
 			System.out.println(json);
+			dao.adicionaColaborador(dadosPessoais);
 		} catch (org.json.simple.parser.ParseException e1){
 			e1.printStackTrace();
 		}

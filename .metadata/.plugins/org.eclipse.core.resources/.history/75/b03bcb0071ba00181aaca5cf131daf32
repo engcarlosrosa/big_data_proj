@@ -1,0 +1,4 @@
+#root Properties
+user= root
+password= 123456
+database=  rhcontroller

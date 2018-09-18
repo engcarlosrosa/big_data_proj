@@ -27,13 +27,17 @@ public class RecebeJsonDadosPessoais extends HttpServlet {
 		
 		request.getParameter("json");
 		DadosPessoais dadosPessoais = new DadosPessoais();
+
+		DAO dao = new DAO();
+
 		JSONObject jsonObject;
 		JSONParser parser = new JSONParser();
 		
 		try{
 			jsonObject = (JSONObject) parser.parse(request.getParameter("json"));
-			dadosPessoais.setId_funcionario(Integer.valueOf(jsonObject.get("id_funcionario").toString()));
-	
+			dadosPessoais.setId_funcionario(jsonObject.get("id_funcionario").toString());
+			
+			dao.removeColaborador(dadosPessoais.getId_funcionario());
 			
 			String json = new Gson().toJson(dadosPessoais);
 			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonApagaDadosPessoais.java:");

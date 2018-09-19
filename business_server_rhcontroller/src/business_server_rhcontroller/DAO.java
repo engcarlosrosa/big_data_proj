@@ -73,7 +73,7 @@ public class DAO {
 	
 	public void alteraColaborador(DadosPessoais dadospessoais){
 		String sql = "UPDATE dados_pessoais SET " +
-				"(NOME, NASCIMENTO, RG,ORGAO,CPF, NASCIONALIDADE,ENDERECO,CONTATO, NOME_PAI , NOME_MAE , DADOS_BANCARIOS ) values (?,?,?,?,?,?,?,?,?,?,?) WHERE usuario_id=?";
+				"(NOME, NASCIMENTO, RG,ORGAO,CPF, NACIONALIDADE,ENDERECO,CONTATO, NOME_PAI , NOME_MAE , DADOS_BANCARIOS ) values (?,?,?,?,?,?,?,?,?,?,?) WHERE usuario_id=?";
 		PreparedStatement stmt;
 		try {
 
@@ -130,7 +130,14 @@ public class DAO {
 				usuario.setDados_bancarios(rs.getString("dados_bancarios"));
 				usuarios.add(usuario);
 			}
-			
+				rs.close();
+				stmt.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return usuarios;		
+		}
 			public List<DadosPessoais> getListaUsuarios_id(int id_funcionario){
 
 				List<DadosPessoais> usuarios = new ArrayList<DadosPessoais>();
@@ -152,7 +159,7 @@ public class DAO {
 						usuario.setRg(rs.getString("rg"));
 						usuario.setOrgao(rs.getString("orgao"));
 						usuario.setCpf(rs.getString("cpf"));
-						usuario.setNacionalidade(rs.getString("nascionalidade"));
+						usuario.setNacionalidade(rs.getString("nacionalidade"));
 						usuario.setEndereco(rs.getString("endereco"));
 						usuario.setContato(rs.getString("contato"));
 						usuario.setNome_pai(rs.getString("nome_pai"));

@@ -26,15 +26,16 @@ public class RecebeDevolveJsonListaDadosFuncionarios extends HttpServlet {
 		DAO dao = new DAO();
 		JSONObject jsonObject;
 		JSONParser parser = new JSONParser();
-		
+		System.out.println("Estamos em /RecebeDevolveJsonListaDadosFuncionarios");
 		try{
 			jsonObject = (JSONObject) parser.parse(request.getParameter("json"));
-			String json = new Gson().toJson(dao.getListaUsuarios_id(Integer.valueOf(jsonObject.get("usuario_id").toString())));
+			String json = new Gson().toJson(dao.getListaUsuarios_id(Integer.valueOf(jsonObject.get("id_funcionario").toString())));
 			response.getWriter().write(json);
 			System.out.println(json);
 		} catch (org.json.simple.parser.ParseException e1){
 			e1.printStackTrace();
 		}
+		
 		dao.close();
 	}
 

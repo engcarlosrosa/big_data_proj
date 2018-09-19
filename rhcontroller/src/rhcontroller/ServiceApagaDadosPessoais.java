@@ -27,7 +27,7 @@ import com.google.gson.Gson;
 
 
 @WebServlet("/ServiceApagaDadosPessoais")
-public class ServiceAdicionaDadosPessoais extends HttpServlet {
+public class ServiceApagaDadosPessoais extends HttpServlet {
 	protected void service(HttpServletRequest request,
 							HttpServletResponse response)
 	throws IOException, ServletException {
@@ -36,7 +36,7 @@ public class ServiceAdicionaDadosPessoais extends HttpServlet {
 		
 		DadosPessoais dadosPessoais = new DadosPessoais();
 		
-		dadosPessoais.setId_funcionario(request.getParameter("id_funcionario"));
+		dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
 	
 		
 		String json = new Gson().toJson(dadosPessoais);

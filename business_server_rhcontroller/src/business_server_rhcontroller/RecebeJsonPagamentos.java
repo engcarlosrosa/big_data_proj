@@ -26,6 +26,7 @@ public class RecebeJsonPagamentos extends HttpServlet {
 		
 		
 		request.getParameter("json");
+		DAO dao = new DAO();
 		Pagamentos pagamentos = new Pagamentos();
 		JSONObject jsonObject;
 		JSONParser parser = new JSONParser();

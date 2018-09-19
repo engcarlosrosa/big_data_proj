@@ -45,7 +45,8 @@ System.out.println(json);
 
 //POST
 HttpClient client = HttpClients.createDefault();
-String url = "http://localhost:8080/business_service_rhcontroller/RecebeDevolveJsonListaDadosFuncionarios";
+String url = "http://localhost:8080/business_server_rhcontroller/RecebeDevolveJsonListaDadosFuncionarios";
+System.out.println("Estamos em ServiceListaFuncionarios");
 HttpPost request1 = new HttpPost(url);
 List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
 urlParameters.add(new BasicNameValuePair("json",json));

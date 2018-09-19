@@ -35,7 +35,7 @@ public class RecebeJsonPagamentos extends HttpServlet {
 			jsonObject = (JSONObject) parser.parse(request.getParameter("json"));
 			pagamentos.setId_funcionario((String) jsonObject.get("id_funcionario"));
 			pagamentos.setId_pagamentos((String) jsonObject.get("id_pagamento"));
-			pagamentos.setValor((String) jsonObject.get("valor"));
+			pagamentos.setMes((String) jsonObject.get("valor"));
 			pagamentos.setMes((String) jsonObject.get("mes"));
 			pagamentos.setAno((String) jsonObject.get("ano"));
 			pagamentos.setTipo((String) jsonObject.get("tipo"));

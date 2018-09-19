@@ -20,9 +20,7 @@
 </ul>
 
 <form action="ServiceAdicionaPagamentos" method="post">
-    Id Funcionário:<input name="id_funcionario" type="text" >   
-	<br>             
-    Valor:<input name="valor" type="text" >   
+    Id Funcionário:<input name="id_funcionario" type="text" >       
     <br>             
     Mes:<input name="mes" type="text" >
     <br>

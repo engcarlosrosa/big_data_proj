@@ -6,7 +6,6 @@ public class Pagamentos {
 	
 	private String id_pagamentos;
 	private String id_funcionario;
-	private String valor;
 	private String mes;
 	private String ano;
 	private String tipo;
@@ -41,12 +40,6 @@ public class Pagamentos {
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-	public String getValor() {
-		return valor;
-	}
-	public void setValor(String valor) {
-		this.valor = valor;
 	}
 	
 	

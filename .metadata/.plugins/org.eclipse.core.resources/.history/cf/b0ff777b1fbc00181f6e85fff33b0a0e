@@ -38,7 +38,6 @@ public class ServiceAdicionaPagamentos extends HttpServlet {
 		//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
 		pagamentos.setId_funcionario(request.getParameter("id_funcionario"));
 		pagamentos.setId_pagamentos(request.getParameter("id_pagamento"));
-		pagamentos.setValor(request.getParameter("valor"));
 		pagamentos.setMes(request.getParameter("mes"));
 		pagamentos.setAno(request.getParameter("ano"));
 		pagamentos.setTipo(request.getParameter("tipo"));

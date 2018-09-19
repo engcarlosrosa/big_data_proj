@@ -73,17 +73,16 @@ public class DAO {
 	
 	public void adicionaPagamento(Pagamentos pagamento){
 		String sql = "INSERT INTO pagamentos" +
-	"(id_pagamento, id_funcionario, valor, mes, ano, tipo) values (?,?,?,?,?,?)";
+	"(id_pagamento, id_funcionario, mes, ano, tipo) values (?,?,?,?,?)";
 		PreparedStatement stmt;
 		try {
 			System.out.println(connection.prepareStatement(sql));
 			stmt = connection.prepareStatement(sql);
 			stmt.setString(1,pagamento.getId_pagamentos());
 			stmt.setString(2, pagamento.getId_funcionario());
-			stmt.setString(3, pagamento.getValor());
-			stmt.setString(4, pagamento.getMes());
-			stmt.setString(5, pagamento.getAno());
-			stmt.setString(6, pagamento.getTipo());
+			stmt.setString(3, pagamento.getMes());
+			stmt.setString(4, pagamento.getAno());
+			stmt.setString(5, pagamento.getTipo());
 
 			stmt.execute();
 			stmt.close();

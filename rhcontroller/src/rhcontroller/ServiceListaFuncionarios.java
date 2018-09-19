@@ -38,7 +38,7 @@ throws IOException, ServletException {
 PrintWriter out = response.getWriter();
 
 DadosPessoais dadosPessoais = new DadosPessoais();
-dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
+//dadosPessoais.setId_funcionario(Integer.valueOf(request.getParameter("id_funcionario")));
 
 String json = new Gson().toJson(dadosPessoais);
 System.out.println(json);

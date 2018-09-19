@@ -94,7 +94,7 @@ public class DAO {
 	
 	public void alteraColaborador(DadosPessoais dadospessoais){
 		String sql = "UPDATE dados_pessoais SET " +
-				"(NOME, NASCIMENTO, RG,ORGAO,CPF, NACIONALIDADE,ENDERECO,CONTATO, NOME_PAI , NOME_MAE , DADOS_BANCARIOS ) values (?,?,?,?,?,?,?,?,?,?,?) WHERE usuario_id=?";
+				"NOME=?, NASCIMENTO=?, RG=?,ORGAO=?,CPF=?, NACIONALIDADE=?, ENDERECO=?, CONTATO=?, NOME_PAI=?, NOME_MAE=?, DADOS_BANCARIOS=? WHERE id_funcionario=?";
 		PreparedStatement stmt;
 		try {
 
@@ -159,14 +159,14 @@ public class DAO {
 			}
 			return usuarios;		
 		}
-			public List<DadosPessoais> getListaUsuarios_id(int id_funcionario){
+			public List<DadosPessoais> getListaUsuarios_id(){
 
 				List<DadosPessoais> usuarios = new ArrayList<DadosPessoais>();
 				
 				PreparedStatement stmt;
 
 				try {
-					stmt = connection.prepareStatement("SELECT * FROM dados_pessoais");
+					stmt = connection.prepareStatement("SELECT * FROM dados_pessoais ORDER BY NOME");
 					ResultSet rs = stmt.executeQuery();
 					
 					while(rs.next()){

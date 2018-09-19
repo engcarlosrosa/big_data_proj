@@ -40,7 +40,7 @@ public class ServiceApagaDadosPessoais extends HttpServlet {
 	
 		
 		String json = new Gson().toJson(dadosPessoais);
-		System.out.println("Estamos em rhcontroller/ServiceAdicionaDadosPessoais.java");
+		System.out.println("Estamos em rhcontroller/ServiceApagaDadosPessoais.java");
 		System.out.println(json);
 		
 		//POST
@@ -54,11 +54,11 @@ public class ServiceApagaDadosPessoais extends HttpServlet {
  		
  		out.println("<html>");
  		out.println("<body>");
- 		out.println(dadosPessoais.getNome() + " adicionado com sucesso.");
+ 		out.println("ID deletado com sucesso.");
  		out.println("Voltar para o ");
  		out.println("<a href=\"menu.html\">Menu Principal</a>");
  		out.println(" ou ");
- 		out.println("<a href=\"cria_dados_pessoais.html\"> Adicionar novo funcionário.</a>");
+ 		out.println("<a href=\"apaga_funcionario.html\"> Deletar outro funcionario.</a>");
  		out.println("</a>");
  		out.println("</body>");
  		out.println("</html>");

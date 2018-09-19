@@ -20,7 +20,7 @@ import com.google.gson.Gson;
  * Servlet implementation class RecebeJsonDadosPessoais
  */
 @WebServlet("/RecebeJsonApagaDadosPessoais")
-public class RecebeJsonDadosPessoais extends HttpServlet {
+public class RecebeJsonApagaDadosPessoais extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -35,9 +35,10 @@ public class RecebeJsonDadosPessoais extends HttpServlet {
 		
 		try{
 			jsonObject = (JSONObject) parser.parse(request.getParameter("json"));
-			dadosPessoais.setId_funcionario(jsonObject.get("id_funcionario").toString());
 			
-			dao.removeColaborador(dadosPessoais.getId_funcionario());
+			dadosPessoais.setId_funcionario(Integer.valueOf(jsonObject.get("id_funcionario").toString()));
+			
+			dao.removeColaborador(dadosPessoais);
 			
 			String json = new Gson().toJson(dadosPessoais);
 			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonApagaDadosPessoais.java:");

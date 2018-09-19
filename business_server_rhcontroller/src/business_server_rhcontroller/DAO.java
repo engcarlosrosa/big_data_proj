@@ -179,15 +179,15 @@ public class DAO {
 	}
 	
 
-	public void removeColaborador(String id){
+	public void removeColaborador(DadosPessoais dadospessoais){
 		PreparedStatement stmt;
 		try {
 
-			stmt = connection.prepareStatement("DELETE FROM dados_pessoais WHERE usuario_id=?");
-			stmt.setString(1, id);
+			stmt = connection.prepareStatement("DELETE FROM dados_pessoais WHERE id_funcionario=?");
+			//System.out.println(dadospessoais.getId_funcionario());
+			stmt.setInt(1, dadospessoais.getId_funcionario());
 			stmt.execute();
 			stmt.close();
-
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

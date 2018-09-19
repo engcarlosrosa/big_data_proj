@@ -22,6 +22,8 @@
 <form action="ServiceAdicionaPagamentos" method="post">
     Id Funcionário:<input name="id_funcionario" type="text" >       
     <br>             
+    Id Pagamentos:<input name="id_pagamento" type="text" >
+    <br>
     Mes:<input name="mes" type="text" >
     <br>
     Ano:<input name="ano" type="text" >

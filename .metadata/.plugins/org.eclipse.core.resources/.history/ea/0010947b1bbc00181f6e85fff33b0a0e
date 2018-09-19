@@ -208,10 +208,8 @@ public class DAO {
 				System.out.println(id_funcionario);
 				try {
 					stmt = connection.prepareStatement("SELECT d.nome, p.tipo, p.valor, p.mes, p.ano  FROM dados_pessoais d, pagamentos p where d.id_funcionario = p.id_funcionario AND d.id_funcionario = ?");
-		
-					stmt.setInt(1, id_funcionario);
-					//stmt.execute();
 					ResultSet rs = stmt.executeQuery();
+					
 					while(rs.next()){
 
 						Pagamentos pagamento = new Pagamentos();

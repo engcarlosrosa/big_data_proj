@@ -91,6 +91,24 @@ public class DAO {
 			e.printStackTrace();
 		}
 	}
+
+	public void adicionaBenefício(Beneficios beneficio){
+		String sql = "INSERT INTO pagamentos" +
+	"(nome) values (?)";
+		PreparedStatement stmt;
+		try {
+			System.out.println(connection.prepareStatement(sql));
+			stmt = connection.prepareStatement(sql);
+			stmt.setString(1,beneficio.getNome());
+		
+
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 	
 	public void alteraColaborador(DadosPessoais dadospessoais){
 		String sql = "UPDATE dados_pessoais SET " +

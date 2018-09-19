@@ -43,6 +43,7 @@ public class RecebeJsonPagamentos extends HttpServlet {
 			String json = new Gson().toJson(pagamentos);
 			System.out.println("Estamos em business_server_rhcontroller/RecebeJsonPagamentos.java:");
 			System.out.println(json);
+			dao.adicionaPagamento(pagamentos);
 		} catch (org.json.simple.parser.ParseException e1){
 			e1.printStackTrace();
 		}

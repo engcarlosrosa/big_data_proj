@@ -61,8 +61,9 @@ if(resp.getStatusLine().getStatusCode() == 200) {
 	  BufferedReader br = new BufferedReader(stream);
 	  String line;
 	  out.println("<html><body><table border='1'>");
-	  out.println("<tr><td>Nome</td><td>Conta_id</td>" + 
-	              "<td>Emissor</td><td>Valor</td><td>Vencimento</td><td>Status</td><td>Atualizar</td><td>Remover</td></tr>");
+	  out.println("<tr><td>Nome</td><td>Contato</td><td>Endereço</td><td>Dados Bancários</td>"/** + 
+	              "<td>Orgão</td><td>CPF</td><td>Nacionalidade</td><td>Endereço</td>"
+	              + "<td>Contato</td><td>Nome do Pai</td><td>Nome da Mãe</td><td>Dados Bancários</td></tr>"**/);
 	  
 	  //usuario = (Usuarios) gson.fromJson(line, Usuarios.class);
 		JSONParser jsonParser = new JSONParser();
@@ -73,6 +74,7 @@ if(resp.getStatusLine().getStatusCode() == 200) {
 			for (int i = 0; i < array.size(); i++) {
 			    JSONObject object = (JSONObject) array.get(i);
 			    out.println("<tr><td >" + object.get("nome") + "</td>");
+			    /**
 			    out.println("<td >" + object.get("rg") + "</td>");
 			    out.println("<td >" + object.get("orgao") + "</td>");
 			    out.println("<td >" + object.get("cpf") + "</td>");
@@ -84,10 +86,13 @@ if(resp.getStatusLine().getStatusCode() == 200) {
 		        month= month+um;
 			    out.println("<td >" + dayOfMonth+"/"+month+"/"+year + "</td>");
 			    out.println("<td >" + object.get("nacionalidade") + "</td>");
+			    **/
 			    out.println("<tr><td >" + object.get("endereco") + "</td>");
 			    out.println("<td >" + object.get("contato") + "</td>");
+			    /**
 			    out.println("<td >" + object.get("nome_pai") + "</td>");
 			    out.println("<td >" + object.get("nome_mae") + "</td>");
+			    **/
 			    out.println("<td >" + object.get("dados_bancarios") + "</td>");
 			    out.println("<td><a href=\"http://localhost:8080/billOrganizer_webApp/AtualizaConta.html#id="+object.get("conta_id")+"&emissor="+object.get("emissor")+"&valor="+object.get("valor")+"&usuario_id="+object.get("usuario_id")+"&status="+object.get("status")+"\">Atualizar</a></td>");
 			    out.println("<td><a href=\"http://localhost:8080/billOrganizer_webApp/RemoveConta.html#id="+object.get("conta_id")+"\">Remover</a></td></tr>");

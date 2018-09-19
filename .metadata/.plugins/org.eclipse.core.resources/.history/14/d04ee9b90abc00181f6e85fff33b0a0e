@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu Principal</title>
+</head>
+<body>
+<ul>
+  <li><a href="menu.html">Menu Principal</a></li>
+  <li><a href="cria_dados_pessoais.html">Cria Dados Pessoais</a></li>
+  <li><a href="lista_funcionarios.html">Lista Funcionarios</a></li>
+  <li><a href="cria_pagamentos.html">Cria Pagamento</a></li>
+  <li><a href="remove_funcionario.html">Remove Pagamento</a></li>
+  <li><a href="lista_funcionario_pagamentos.html">Lista Pagamentos do Funcionario</a></li>
+  <li><a href="cria_beneficios.html">Cria Benefício</a></li>
+  <li><a href="ServiceListaBeneficios">Lista Beneficios</a></li>
+  <li><a href="cria_faltas.html">Cria Falta</a></li>
+  <li><a href="ServiceListaFaltas">Lista Faltas</a></li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+  <li><a href="menu.html">Menu Principal</a></li>
+  <li><a href="cria_dados_pessoais.html">Cria Dados Pessoais</a></li>
+  <li><a href="lista_funcionarios.html">Lista Funcionarios</a></li>
+  <li><a href="cria_pagamentos.html">Cria Pagamento</a></li>
+  <li><a href="ServiceListaPagamentos">Lista Pagamentos</a></li>
+  <li><a href="cria_beneficios.html">Cria Benef�cio</a></li>
+  <li><a href="ServiceListaBeneficios">Lista Beneficios</a></li>
+  <li><a href="cria_faltas.html">Cria Falta</a></li>
+  <li><a href="ServiceListaFaltas">Lista Faltas</a></li>
+</ul>
+
+<form action="ServiceAdicionaBeneficios" method="post">
+    Id Funcionário:<input name="id_funcionario" type="text" >       
+    <br>             
+    Id Benefício:<input name="id_beneficio" type="text" >
+    <br>
+    Valor:<input name="valor" type="text" >
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

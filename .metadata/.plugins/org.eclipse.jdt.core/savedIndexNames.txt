@@ -22,7 +22,6 @@ INDEX VERSION 1.129+C:\Users\user\Documents\GitHub\big_data_proj\.metadata\.plug
 2902059358.index
 3238716082.index
 2790302833.index
-3084041629.index
 2886278964.index
 3951253591.index
 3608585563.index

@@ -5,9 +5,11 @@ public class Pagamentos {
 	
 	private String id_pagamentos;
 	private String id_funcionario;
+	private String nome;
 	private String mes;
 	private String ano;
 	private String tipo;
+	private String valor;
 	
 	
 	public String getId_pagamentos() {
@@ -39,6 +41,18 @@ public class Pagamentos {
 	}
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getValor() {
+		return valor;
+	}
+	public void setValor(String valor) {
+		this.valor = valor;
 	}
 	
 	

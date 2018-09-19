@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<ul>
+  <li><a href="menu.html">Menu Principal</a></li>
+  <li><a href="cria_dados_pessoais.html">Cria Dados Pessoais</a></li>
+  <li><a href="lista_funcionarios.html">Lista Funcionarios</a></li>
+  <li><a href="cria_pagamentos.html">Cria Pagamento</a></li>
+  <li><a href="remove_funcionario.html">Remove Pagamento</a></li>
+  <li><a href="lista_funcionario_pagamentos.html">Lista Pagamentos do Funcionario</a></li>
+  <li><a href="cria_beneficios.html">Cria Benefício</a></li>
+  <li><a href="ServiceListaBeneficios">Lista Beneficios</a></li>
+  <li><a href="cria_faltas.html">Cria Falta</a></li>
+  <li><a href="ServiceListaFaltas">Lista Faltas</a></li>
+</ul>
+
+<form action="ServiceAdicionaDadosPessoais" method="post">
+    Nome:<input name="nome" type="text" >       
+    <br>             
+    Data de nascimento:<input name="nascimento" type="date" >
+    <br>
+    Rg:<input name="rg" type="text" >
+    <br>
+    Orgão Emissor:<input name="orgao" type="text" >
+    <br>
+    CPF:<input name="cpf" type="text"  >
+    <br>
+    Nacionalidade:<input name="nacionalidade" type="text"  >
+    <br>
+    Endereço:<input name="endereco" type="text"  >
+    <br>
+    Contato:<input name="contato" type="text"  >
+    <br>
+    Nome do pai:<input name="nome_pai" type="text"  >
+    <br>
+    Nome da mãe:<input name="nome_mae" type="text"  >
+    <br>
+    Dados bancários:<input name="dados_bancarios" type="text"  >
+    <br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

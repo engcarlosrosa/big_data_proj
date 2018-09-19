@@ -7,7 +7,7 @@ INSERT INTO DADOS_PESSOAIS VALUES(
         'Itau, Ag:4000-0, C/C:5000-0, Antonio Sigrist');
 
 INSERT INTO PAGAMENTOS VALUES(
-		1, 1, 10000.57, '2018-08-03', 'Bonus');
+		1, 1, 10000.57, '08', '2018', 'Bonus');
 
 INSERT INTO FALTAS VALUES(
 		1, 1, '2018-08-01', 'Check-up no Einstein', 1);

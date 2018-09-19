@@ -71,6 +71,27 @@ public class DAO {
 		}
 	}
 	
+	public void adicionaPagamento(Pagamentos pagamento){
+		String sql = "INSERT INTO pagamentos" +
+	"(id_pagamento, id_funcionario, mes, ano, tipo) values (?,?,?,?,?)";
+		PreparedStatement stmt;
+		try {
+			System.out.println(connection.prepareStatement(sql));
+			stmt = connection.prepareStatement(sql);
+			stmt.setString(1,pagamento.getId_pagamentos());
+			stmt.setString(2, pagamento.getId_funcionario());
+			stmt.setString(3, pagamento.getMes());
+			stmt.setString(4, pagamento.getAno());
+			stmt.setString(5, pagamento.getTipo());
+
+			stmt.execute();
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
 	public void alteraColaborador(DadosPessoais dadospessoais){
 		String sql = "UPDATE dados_pessoais SET " +
 				"(NOME, NASCIMENTO, RG,ORGAO,CPF, NACIONALIDADE,ENDERECO,CONTATO, NOME_PAI , NOME_MAE , DADOS_BANCARIOS ) values (?,?,?,?,?,?,?,?,?,?,?) WHERE usuario_id=?";
@@ -178,12 +199,43 @@ public class DAO {
 		return usuarios;		
 	}
 	
+			public List<Pagamentos> getListaFuncionarioPagamentos_id(int id_funcionario){
 
+				List<Pagamentos> pagamentos = new ArrayList<Pagamentos>();
+				
+				
+				PreparedStatement stmt;
+				System.out.println(id_funcionario);
+				try {
+					stmt = connection.prepareStatement("SELECT d.nome, p.tipo, p.valor, p.mes, p.ano  FROM dados_pessoais d, pagamentos p where d.id_funcionario = p.id_funcionario AND d.id_funcionario =?");
+					ResultSet rs = stmt.executeQuery();
+					
+					while(rs.next()){
+
+						Pagamentos pagamento = new Pagamentos();
+						
+						pagamento.setNome(rs.getString("nome"));
+						pagamento.setTipo(rs.getString("tipo"));
+						pagamento.setValor(rs.getString("valor"));
+						pagamento.setMes(rs.getString("mes"));
+						pagamento.setAno(rs.getString("ano"));
+						pagamentos.add(pagamento);
+					}
+
+			rs.close();
+			stmt.close();
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return pagamentos;		
+	}
 	public void removeColaborador(DadosPessoais dadospessoais){
 		PreparedStatement stmt;
 		try {
 
-			stmt = connection.prepareStatement("DELETE FROM dados_pessoais WHERE id_funcionario=?");
+			stmt = connection.prepareStatement("DELETE  FROM dados_pessoais WHERE id_funcionario=?");
 			//System.out.println(dadospessoais.getId_funcionario());
 			stmt.setInt(1, dadospessoais.getId_funcionario());
 			stmt.execute();
